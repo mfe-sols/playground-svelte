@@ -1,6 +1,6 @@
 {
-  "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "pnpm run build",
+  "installCommand": "npm install --include=dev",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "headers": [
     {
