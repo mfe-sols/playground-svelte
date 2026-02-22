@@ -1,0 +1,22 @@
+{
+  "name": "playground-svelte",
+  "projectType": "application",
+  "root": "apps/playground-svelte",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/playground-svelte",
+        "command": "pnpm run serve"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/playground-svelte",
+        "command": "pnpm run build"
+      },
+      "outputs": ["{workspaceRoot}/apps/playground-svelte/dist"]
+    }
+  }
+}

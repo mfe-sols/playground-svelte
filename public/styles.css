@@ -1,0 +1,135 @@
+:root {
+  font-family: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  font-family: var(--ds-font-family, "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif);
+}
+
+.vanilla-app {
+  color: #0f172a;
+  --sv-bg: #ffffff;
+  --sv-surface: #ffffff;
+  --sv-surface-muted: #f8fafc;
+  --sv-border: #e2e8f0;
+  --sv-text: #0f172a;
+  --sv-text-muted: #64748b;
+  --sv-accent: var(--ds-color-primary, #ff6b6b);
+  --sv-accent-strong: #1d4ed8;
+  --sv-shadow-1: 0 8px 20px rgba(15, 23, 42, 0.08);
+  --sv-shadow-2: 0 14px 40px rgba(15, 23, 42, 0.12);
+  background: var(--sv-bg);
+  border-radius: 18px;
+  border: 1px solid var(--sv-border);
+  padding: 20px;
+  box-shadow: var(--sv-shadow-2);
+}
+
+.vanilla-app .ds-container {
+  max-width: 1200px;
+}
+
+.vanilla-app .ds-card {
+  background: var(--sv-surface);
+  border: 1px solid var(--sv-border);
+  border-radius: 16px;
+  box-shadow: var(--sv-shadow-1);
+}
+
+.vanilla-app .ds-appbar {
+  background: linear-gradient(135deg, #eff6ff, #f8fafc 55%, #ffffff);
+  border: 1px solid var(--sv-border);
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: var(--sv-shadow-1);
+}
+
+.vanilla-app .ds-btn--primary {
+  background: var(--sv-accent);
+}
+
+.vanilla-app .ds-btn--primary:hover {
+  background: var(--sv-accent-strong);
+}
+
+.vanilla-app .ds-badge--success {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #065f46;
+}
+
+.vanilla-app .ds-badge--warning {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #92400e;
+}
+
+.vanilla-app .ds-badge--danger {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #991b1b;
+}
+
+.ds-toast-host {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: grid;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.ds-datepicker-menu {
+  position: relative;
+}
+
+.ds-datepicker-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--sv-surface);
+  border: 1px solid var(--sv-border);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: var(--sv-shadow-2);
+  z-index: 20;
+}
+
+.vanilla-app .ds-inline-edit {
+  position: relative;
+  border-radius: var(--radius-md);
+  padding: 2px 6px;
+  transition: background-color 150ms ease;
+  cursor: text;
+}
+
+.vanilla-app .ds-inline-edit:hover {
+  background-color: var(--color-surface-muted);
+}
+
+.vanilla-app .ds-inline-editor {
+  position: absolute;
+  z-index: 40;
+  width: min(360px, calc(100vw - 32px));
+  min-width: 300px;
+  max-width: min(720px, calc(100vw - 32px));
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 8px 12px 12px 8px;
+  box-shadow: var(--ds-shadow-2);
+  resize: both;
+  overflow: auto;
+}
+
+.vanilla-app .ds-inline-editor__textarea {
+  min-height: 96px;
+}
